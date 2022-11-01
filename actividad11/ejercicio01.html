@@ -3,25 +3,30 @@
 <head lang="es'MX">
   <meta charset="utf-8">
   <title>Prevalidación</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="ejercicio01.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/error.css">
+  <link rel="stylesheet" href="css/ejercicio01.css">
+  <script src="js/formulario.js" defer></script>
 </head>
 
 <body>
-  <form method="get" action="">
+  <form method="get" action="" class="formulario" id="formulario">
 
     <fieldset>
       <legend>Detalles de la foto</legend>
+      <ul id="e">
+        <p>Error: Desbes ingresar todos los datos marcados como obligatorios</p>
+      </ul>
       <table>
         <tr>
           <td colspan="2">
-            <p>
+            <p id="til">
               <label>Título</label><br>
-              <input type="text" name="title"  size="80">
+              <input type="text" name="title"  size="80" id="titulo">
             </p>
-            <p>
+            <p id="des">
               <label>Descripcion</label><br/>
-              <textarea name="description" rows="7" cols="85">
+              <textarea name="description" rows="7" cols="85" id="myTextarea">
               </textarea>
             </p>
           </td>
@@ -81,9 +86,9 @@
 
         <tr>
           <td colspan="2">
-            <div class="rec">
+            <div class="rec" id="rect">
               <label>Acepto la licencia de software</label>
-              <input type="checkbox" name="accept">
+              <input type="checkbox" name="accept" id="licencia">
             </div>
           </td>
         </tr>
